@@ -228,13 +228,20 @@ main{
 }
 
 @media (max-width:500px){
-
+.password-container{
+    width: 290px;
+    height: 450px auto;
+    /* border: 2px solid red; */
+ 
+}
     #generate:hover,#generate:focus{
         border-color: rgb(112, 250, 124);
         background-color: transparent;
         color: rgb(112, 250, 124);
     }
 }
+
+
 
 .add-check{
     background-color: rgb(112, 250, 124);
