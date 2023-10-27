@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Heebo&display=swap');
+
+*{
+  margin: 0; 
+  padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;  
+  background-color: rgb(16,16,20);
+
+  font-family: 'Heebo', sans-serif;
+}
+
+main{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.password-container{
+    width: 400px;
+    height: 450px auto;
+    /* border: 2px solid red; */
+ 
+}
+.input-container{
+    padding: 6px 0px;
+    height: 30px;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+
+
+.password{
+    background-color: rgb(36,35,43);
+    color: white;
+    height: 100%;
+    width: 95%;
+    padding: 10px ;
+    font-size: 1.4em;
+    font-weight:bold;
+    outline: none;
+    border: none;
+    font-family: 'heebo',sans-serif;
+    position: relative;
+}
+
+
+
+#copy-text{
+    top: 16px;
+    right: 10px;color: rgb(165,255,173);
+    position: absolute;
+    cursor: pointer;
+}
+
+#copy-text:hover{
+   color: white;
+}
+
+.content-container{
+    background-color: rgb(36,35,43);
+    padding: 10px;
+    height: fit-content;
+    margin-top: 2.5em;
+    color:white;
+}
+
+
+.top-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#length{
+    font-size: 1.7em;
+    color: rgb(165,255,173);
+}
+
+
+#range{
+    cursor: pointer;
+
+    width: 100%;
+    accent-color:rgb(112, 250, 124);
+   
+}
+
+#range [type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ff4500;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+    transition:  .3s ease-in-out;
+  } 
+
+.labels{
+    width: 20px;
+    height: 20px;
+    visibility: hidden;  
+        
+}
+.label-container {
+    width: 100%;
+    margin-top: 12px;
+}
+
+
+
+.label-main{
+    width: 95%;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.3em;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 17px;
+}
+
+
+.checkmark{
+    position: absolute; 
+    top: 9px; 
+    left: 6px; 
+    height: 20px; 
+    width: 20px; 
+    background-color: black; 
+    border: 1px solid white;
+}
+
+.label-main input:checked ~ .checkmark { 
+    background-color: rgb(112, 250, 124); 
+} 
+
+.checkmark:after { 
+    content: ""; 
+    position: absolute; 
+    display: none; 
+} 
+
+ /* Display checkmark when checked */ 
+ .label-main input:checked ~ .checkmark:after { 
+    display: block; 
+} 
+
+.label-main .checkmark:after { 
+    left:6px; 
+    top: 2px;
+    bottom: 8px; 
+    width: 4px; 
+    height: 10px; 
+    border: solid black; 
+    border-width: 0 3px 3px 0; 
+    -webkit-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    transform: rotate(45deg); 
+} 
+
+.strength-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24,23,31);
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+}
+
+.strength-detect{
+  width: 10px;
+  height: 19px;
+  border:1px solid white;
+
+}
+
+.poli{
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#generate{
+    width: 100%;
+    padding: 9px;
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: 'heebo',sans-serif;
+    text-transform: uppercase;
+    margin-top: 10px;
+    background-color: rgb(112, 250, 124);
+    border: 2px solid transparent;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+#generate:hover{
+    border-color: rgb(112, 250, 124);
+    background-color: transparent;
+    color: rgb(112, 250, 124);
+}
+
+
+@media (max-width:1000px){
+
+    #generate:hover,#generate:focus{
+        border-color: rgb(112, 250, 124);
+        background-color: transparent;
+        color: rgb(112, 250, 124);
+    }
+}
+
+@media (max-width:500px){
+
+    #generate:hover,#generate:focus{
+        border-color: rgb(112, 250, 124);
+        background-color: transparent;
+        color: rgb(112, 250, 124);
+    }
+}
+
+.add-check{
+    background-color: rgb(112, 250, 124);
+}

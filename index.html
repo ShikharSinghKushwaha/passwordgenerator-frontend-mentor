@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="index.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <main>
+      <div>
+        <h1 style="color:white;">Password Generator</h1>
+         <div class="password-container">
+            <div class="input-container">
+             <input type="text" placeholder="Your Password" class="password" />
+             <span class="material-symbols-outlined" id="copy-text">
+               file_copy</span>
+             <span id="copyMsg" style="display:none;color: white;margin-top:3px;">Copied to Clipboard</span>
+             </div>
+             <div class="content-container">
+                <div class="top-text">
+                    <h3>Character Length</h3>
+                    <h3 id="length">0</h3>
+                </div>
+                <div class="range-container">
+             <input type="range" id="range" value="0" max="20" />
+            </div>
+             <div class="label-container">
+         
+             <label class="label-main">
+                <input type="checkbox" class="labels" id="upper" checked="true"/>Include UpperCase Letter
+                <span class="checkmark"></span>
+             </label>
+             
+             <label class="label-main">
+                <input type="checkbox"  class="labels" id="lower" />Include LowerCase Letter
+                <span class="checkmark"></span>
+             </label>
+             <label class="label-main">
+                <input type="checkbox"  class="labels" id="number" checked="true" />Include Numbers
+                <span class="checkmark"></span>
+             </label>
+             <label class="label-main">
+                <input type="checkbox"  class="labels" id="symbols" />Include Symbols
+                <span class="checkmark"></span>
+             </label>
+            </div>
+             <div class="strength-container">
+                <span style="font-size: 1.3em;">Strength</span>
+                 <div class="poli">
+                  <h3 id="strength-checker">Too Weak </h3>
+                <span class="strength-detect" id="strength1" style="background-color: red;"></span>
+                <span class="strength-detect" id="strength2"></span>
+                <span class="strength-detect" id="strength3"></span>
+                <span class="strength-detect" id="strength4"></span>
+               </div>
+             </div>
+
+             <button id="generate">Generate <span class="material-symbols-outlined" style="vertical-align: middle;">east</span></button>
+         </div>
+         </div>
+         </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
